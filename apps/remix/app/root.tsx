@@ -1,5 +1,6 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import { bar } from '@mono/ui/bar'
+import { cssBundleHref } from '@remix-run/css-bundle'
+import type { LinksFunction } from '@remix-run/node'
 import {
   Links,
   LiveReload,
@@ -7,15 +8,16 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import { foo } from "~/thing/foo.ts";
+} from '@remix-run/react'
+import { foo } from '~/thing/foo'
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+]
 
 export default function App() {
-  foo;
+  foo()
+  bar('Testing')
   return (
     <html lang="en">
       <head>
@@ -31,5 +33,5 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }

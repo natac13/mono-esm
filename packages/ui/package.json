@@ -1,0 +1,13 @@
+{
+  "name": "@mono/ui",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./bar": {
+      "import": "./src/bar.ts",
+      "types": "./src/bar.ts"
+    }
+  }
+}
